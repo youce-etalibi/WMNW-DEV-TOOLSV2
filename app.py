@@ -261,4 +261,5 @@ def check_ip():
         return jsonify({"error": str(e), "message": "Failed to check IP reputation"}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    from os import environ
+    app.run(host="0.0.0.0", port=int(environ.get("PORT", 5000)))
