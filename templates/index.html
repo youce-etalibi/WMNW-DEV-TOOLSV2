@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>All‑in‑One Tools Suite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <svg width="0" height="0" style="display:none">
+    <symbol id="icon-tools" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" /></symbol>
+    <symbol id="icon-sun" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 14.95a1 1 0 010-1.414l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0zM3 11a1 1 0 100-2H2a1 1 0 100 2h1z" /></symbol>
+    <symbol id="icon-moon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></symbol>
+    <symbol id="icon-copy" viewBox="0 0 20 20" fill="currentColor"><path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z" /><path d="M4 3a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H4z" /></symbol>
+    <symbol id="icon-download" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" /></symbol>
+    <symbol id="icon-clear" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" /></symbol>
+    <symbol id="icon-email" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></symbol>
+    <symbol id="icon-extract" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd" /></symbol>
+    <symbol id="icon-eye" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></symbol>
+    <symbol id="icon-eye-off" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074L3.707 2.293zM10 12a2 2 0 110-4 2 2 0 010 4z" clip-rule="evenodd" /><path d="M2 4.735a10.014 10.014 0 011.542-3.318l-1.141-1.142a1 1 0 10-1.414 1.414L2 4.735zM12.454 16.707l-1.414-1.414A9.953 9.953 0 0110 17c-4.478 0-8.268-2.943-9.542-7a10.014 10.014 0 015.074-5.472L2.293 2.807a1 1 0 00-1.414 1.414L12.454 16.707z" /></symbol>
+  </svg>
+
+  <main class="app">
+    <header class="header">
+      <div class="header__title">
+        <!-- <div class="header__logo" aria-hidden="true"><svg><use href="#icon-tools"></use></svg></div> -->
+        <div class="header__logo" aria-hidden="true"><img src="/static/favicon.jpg" alt="" id="favIcon"></div>
+        <h1>WMNW-DEV-Tools</h1>
+      </div>
+      <div class="theme-toggle" title="Toggle theme">
+        <button id="theme-light" aria-label="Switch to light theme"><svg><use href="#icon-sun"></use></svg></button>
+        <button id="theme-dark" aria-label="Switch to dark theme"><svg><use href="#icon-moon"></use></svg></button>
+      </div>
+    </header>
+
+    <div class="tabs main-tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-target="#panel-dns">DNS Generator</button>
+      <button class="tab" role="tab" aria-selected="false" data-target="#panel-encryptor">Encryptor/Decryptor</button>
+      <button class="tab" role="tab" aria-selected="false" data-target="#panel-gmail">Gmail Extractor</button>
+      <button class="tab" role="tab" aria-selected="false" data-target="#panel-spamhaus">Spamhaus Checker</button>
+    </div>
+
+    <section id="panel-dns" class="panel active card" role="tabpanel">
+    </section>
+
+    <section id="panel-encryptor" class="panel card" role="tabpanel">
+    </section>
+    
+    <section id="panel-gmail" class="panel card" role="tabpanel">
+      <header class="card-header">
+        <div class="icon" aria-hidden="true"><svg><use href="#icon-email"></use></svg></div>
+        <h2>Gmail Metadata Extractor</h2>
+      </header>
+
+      <fieldset id="form-container" class="form-grid">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="yourname@gmail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="apppass">App Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="apppass" placeholder="16-digit App Password" required>
+            <button id="password-toggle" type="button" aria-label="Show password">
+              <svg id="eye-icon" aria-hidden="true"><use href="#icon-eye"></use></svg>
+            </button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="start">Start From (Latest)</label>
+          <input type="number" id="start" value="1" min="1" required>
+        </div>
+        <div class="form-group">
+          <label for="count">Emails to Get</label>
+          <input type="number" id="count" value="10" min="1" required>
+        </div>
+        <div class="form-group col-span-2">
+          <label for="folder">Folder</label>
+          <select id="folder" required>
+            <option value="INBOX">Inbox</option>
+            <option value="[Gmail]/Spam">Spam</option>
+          </select>
+        </div>
+        <div class="form-group col-span-2">
+          <label for="params">Parameters to Extract</label>
+          <select id="params" multiple required></select>
+        </div>
+      </fieldset>
+
+      <div class="actions-center">
+        <button id="extract-btn" class="btn btn--primary">
+          <svg><use href="#icon-extract"></use></svg>
+          <span>Extract Emails</span>
+        </button>
+        <div id="loader" class="loader">
+          <div class="spinner"></div>
+        </div>
+      </div>
+
+      <div class="results-container">
+        <div id="results-actions" class="results-actions"></div>
+        <div class="table-wrapper">
+          <table id="resultTable">
+            <thead><tr id="tableHead"></tr></thead>
+            <tbody id="tableBody">
+              <tr class="placeholder-row">
+                <td colspan="1">Enter your credentials and click "Extract Emails" to begin.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="panel-spamhaus" class="panel card" role="tabpanel">
+      <h2 class="card-title">Spamhaus Reputation Checker</h2>
+      <p style="color: var(--fg-muted); margin-bottom: 24px;">Check domain reputations or IP listing histories.</p>
+
+      <div class="tabs spamhaus-tabs" role="tablist">
+        <button class="tab" aria-selected="true" data-spamhaus-target="#spamhaus-domain">Domains</button>
+        <button class="tab" aria-selected="false" data-spamhaus-target="#spamhaus-ip">IP Addresses</button>
+      </div>
+
+      <div class="spamhaus-content">
+        <!-- Domain Check Panel -->
+        <div id="spamhaus-domain" class="panel active" data-spamhaus-tool="domain">
+          <div class="form-group">
+            <label for="spamhaus-domain-input">Domains (one per line)</label>
+            <textarea id="spamhaus-domain-input" placeholder="example.com&#10;google.com" style="min-height: 120px;"></textarea>
+          </div>
+
+          <div class="btn-group">
+            <button class="btn btn--primary" id="spamhaus-check-domain">
+              <svg><use href="#icon-extract"></use></svg> Check Domains
+            </button>
+            <button class="btn btn--secondary" id="spamhaus-clear-domain">
+              <svg><use href="#icon-clear"></use></svg> Clear
+            </button>
+            <button class="btn btn--success" id="spamhaus-export-domain">
+              <svg><use href="#icon-download"></use></svg> Export CSV
+            </button>
+          </div>
+
+          <div id="spamhaus-domain-progress" class="progress-container" style="display: none; margin-top: 24px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span style="font-size: 14px; color: var(--brand);">Processing...</span>
+              <span id="spamhaus-domain-progress-text" style="font-size: 14px; color: var(--brand);">0 / 0</span>
+            </div>
+            <div style="width: 100%; height: 8px; background-color: var(--bg); border-radius: 4px; overflow: hidden;">
+              <div id="spamhaus-domain-progress-bar" style="height: 100%; background-color: var(--brand); transition: width 0.3s ease; width: 0%;"></div>
+            </div>
+          </div>
+
+          <div id="spamhaus-domain-filter" style="display: none; margin-top: 16px;">
+            <div class="form-group">
+              <input type="text" id="spamhaus-domain-filter-input" placeholder="Filter results...">
+            </div>
+          </div>
+
+          <div id="spamhaus-domain-results" style="margin-top: 24px; display: none;">
+            <div class="table-wrapper">
+              <table id="spamhaus-domain-table">
+                <thead>
+                  <tr>
+                    <th class="sortable-th" data-sort="domain" style="cursor: pointer;">Domain ↕</th>
+                    <th class="sortable-th" data-sort="score" style="cursor: pointer;">Score ↕</th>
+                    <th>Creation Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="spamhaus-domain-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- IP Check Panel -->
+        <div id="spamhaus-ip" class="panel" data-spamhaus-tool="ip">
+          <div class="form-group">
+            <label for="spamhaus-ip-category">Select Spamhaus List Category</label>
+            <select id="spamhaus-ip-category">
+              <option value="CSS">CSS</option>
+              <option value="XBL">XBL</option>
+              <option value="SBL">SBL</option>
+              <option value="PBL">PBL</option>
+              <option value="DROP">DROP</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="spamhaus-ip-input">IP Addresses (one per line)</label>
+            <textarea id="spamhaus-ip-input" placeholder="8.8.8.8&#10;1.1.1.1" style="min-height: 120px;"></textarea>
+          </div>
+
+          <div class="btn-group">
+            <button class="btn btn--primary" id="spamhaus-check-ip">
+              <svg><use href="#icon-extract"></use></svg> Check IPs
+            </button>
+            <button class="btn btn--secondary" id="spamhaus-clear-ip">
+              <svg><use href="#icon-clear"></use></svg> Clear
+            </button>
+            <button class="btn btn--success" id="spamhaus-export-ip">
+              <svg><use href="#icon-download"></use></svg> Export CSV
+            </button>
+          </div>
+
+          <div id="spamhaus-ip-progress" class="progress-container" style="display: none; margin-top: 24px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span style="font-size: 14px; color: var(--brand);">Processing...</span>
+              <span id="spamhaus-ip-progress-text" style="font-size: 14px; color: var(--brand);">0 / 0</span>
+            </div>
+            <div style="width: 100%; height: 8px; background-color: var(--bg); border-radius: 4px; overflow: hidden;">
+              <div id="spamhaus-ip-progress-bar" style="height: 100%; background-color: var(--brand); transition: width 0.3s ease; width: 0%;"></div>
+            </div>
+          </div>
+
+          <div id="spamhaus-ip-filter" style="display: none; margin-top: 16px;">
+            <div class="form-group">
+              <input type="text" id="spamhaus-ip-filter-input" placeholder="Filter results...">
+            </div>
+          </div>
+
+          <div id="spamhaus-ip-results" style="margin-top: 24px; display: none;">
+            <div class="table-wrapper">
+              <table id="spamhaus-ip-table">
+                <thead>
+                  <tr>
+                    <th class="sortable-th" data-sort="ip" style="cursor: pointer;">IP Address ↕</th>
+                    <th>Category</th>
+                    <th>Reason of Listing</th>
+                    <th>Date of Listing</th>
+                    <th>Date to be Delisted</th>
+                  </tr>
+                </thead>
+                <tbody id="spamhaus-ip-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">BY ZAKARIA • WMNW-DEV TOOLS</footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
